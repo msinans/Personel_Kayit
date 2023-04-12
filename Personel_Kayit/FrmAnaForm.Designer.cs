@@ -1,6 +1,6 @@
 ﻿namespace Personel_Kayit
 {
-    partial class Form1
+    partial class FrmAnaForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtMeslek = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -270,6 +270,7 @@
             this.btnGrafikler.TabIndex = 6;
             this.btnGrafikler.Text = "Grafikler";
             this.btnGrafikler.UseVisualStyleBackColor = true;
+            this.btnGrafikler.Click += new System.EventHandler(this.btnGrafikler_Click);
             // 
             // btnistatistik
             // 
@@ -280,6 +281,7 @@
             this.btnistatistik.TabIndex = 5;
             this.btnistatistik.Text = "İstatistik";
             this.btnistatistik.UseVisualStyleBackColor = true;
+            this.btnistatistik.Click += new System.EventHandler(this.btnistatistik_Click);
             // 
             // btnTemizle
             // 
@@ -301,16 +303,20 @@
             this.btnGuncelle.TabIndex = 3;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
+            this.btnSil.BackColor = System.Drawing.Color.Red;
+            this.btnSil.ForeColor = System.Drawing.Color.White;
             this.btnSil.Location = new System.Drawing.Point(96, 89);
             this.btnSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(95, 26);
             this.btnSil.TabIndex = 2;
             this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnKaydet
             // 
@@ -373,42 +379,49 @@
             this.peridDataGridViewTextBoxColumn.HeaderText = "Perid";
             this.peridDataGridViewTextBoxColumn.Name = "peridDataGridViewTextBoxColumn";
             this.peridDataGridViewTextBoxColumn.ReadOnly = true;
+            this.peridDataGridViewTextBoxColumn.Width = 114;
             // 
             // perAdDataGridViewTextBoxColumn
             // 
             this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
             this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
             this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
+            this.perAdDataGridViewTextBoxColumn.Width = 114;
             // 
             // perSoyadDataGridViewTextBoxColumn
             // 
             this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
             this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
             this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
+            this.perSoyadDataGridViewTextBoxColumn.Width = 114;
             // 
             // perSehirDataGridViewTextBoxColumn
             // 
             this.perSehirDataGridViewTextBoxColumn.DataPropertyName = "PerSehir";
             this.perSehirDataGridViewTextBoxColumn.HeaderText = "PerSehir";
             this.perSehirDataGridViewTextBoxColumn.Name = "perSehirDataGridViewTextBoxColumn";
+            this.perSehirDataGridViewTextBoxColumn.Width = 115;
             // 
             // perMaasDataGridViewTextBoxColumn
             // 
             this.perMaasDataGridViewTextBoxColumn.DataPropertyName = "PerMaas";
             this.perMaasDataGridViewTextBoxColumn.HeaderText = "PerMaas";
             this.perMaasDataGridViewTextBoxColumn.Name = "perMaasDataGridViewTextBoxColumn";
+            this.perMaasDataGridViewTextBoxColumn.Width = 114;
             // 
             // perDurumDataGridViewCheckBoxColumn
             // 
             this.perDurumDataGridViewCheckBoxColumn.DataPropertyName = "PerDurum";
             this.perDurumDataGridViewCheckBoxColumn.HeaderText = "PerDurum";
             this.perDurumDataGridViewCheckBoxColumn.Name = "perDurumDataGridViewCheckBoxColumn";
+            this.perDurumDataGridViewCheckBoxColumn.Width = 114;
             // 
             // perMeslekDataGridViewTextBoxColumn
             // 
             this.perMeslekDataGridViewTextBoxColumn.DataPropertyName = "PerMeslek";
             this.perMeslekDataGridViewTextBoxColumn.HeaderText = "PerMeslek";
             this.perMeslekDataGridViewTextBoxColumn.Name = "perMeslekDataGridViewTextBoxColumn";
+            this.perMeslekDataGridViewTextBoxColumn.Width = 114;
             // 
             // tblPersonelBindingSource
             // 
@@ -444,7 +457,7 @@
             this.label8.Text = "label8";
             this.label8.TextChanged += new System.EventHandler(this.label8_TextChanged);
             // 
-            // Form1
+            // FrmAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -457,7 +470,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "FrmAnaForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

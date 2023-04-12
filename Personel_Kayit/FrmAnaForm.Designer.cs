@@ -47,6 +47,7 @@
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnRaporlar = new System.Windows.Forms.Button();
             this.btnGrafikler = new System.Windows.Forms.Button();
             this.btnistatistik = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
@@ -245,6 +246,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.BtnRaporlar);
             this.groupBox2.Controls.Add(this.btnGrafikler);
             this.groupBox2.Controls.Add(this.btnistatistik);
             this.groupBox2.Controls.Add(this.btnTemizle);
@@ -261,9 +263,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşlemler";
             // 
+            // BtnRaporlar
+            // 
+            this.BtnRaporlar.Location = new System.Drawing.Point(95, 234);
+            this.BtnRaporlar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnRaporlar.Name = "BtnRaporlar";
+            this.BtnRaporlar.Size = new System.Drawing.Size(95, 26);
+            this.BtnRaporlar.TabIndex = 7;
+            this.BtnRaporlar.Text = "Raporlar";
+            this.BtnRaporlar.UseVisualStyleBackColor = true;
+            this.BtnRaporlar.Click += new System.EventHandler(this.BtnRaporlar_Click);
+            // 
             // btnGrafikler
             // 
-            this.btnGrafikler.Location = new System.Drawing.Point(96, 219);
+            this.btnGrafikler.Location = new System.Drawing.Point(95, 204);
             this.btnGrafikler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGrafikler.Name = "btnGrafikler";
             this.btnGrafikler.Size = new System.Drawing.Size(95, 26);
@@ -274,7 +287,7 @@
             // 
             // btnistatistik
             // 
-            this.btnistatistik.Location = new System.Drawing.Point(96, 189);
+            this.btnistatistik.Location = new System.Drawing.Point(95, 174);
             this.btnistatistik.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnistatistik.Name = "btnistatistik";
             this.btnistatistik.Size = new System.Drawing.Size(95, 26);
@@ -285,7 +298,7 @@
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(96, 155);
+            this.btnTemizle.Location = new System.Drawing.Point(95, 140);
             this.btnTemizle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(95, 30);
@@ -296,7 +309,7 @@
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(96, 120);
+            this.btnGuncelle.Location = new System.Drawing.Point(95, 105);
             this.btnGuncelle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(95, 30);
@@ -309,7 +322,7 @@
             // 
             this.btnSil.BackColor = System.Drawing.Color.Red;
             this.btnSil.ForeColor = System.Drawing.Color.White;
-            this.btnSil.Location = new System.Drawing.Point(96, 89);
+            this.btnSil.Location = new System.Drawing.Point(95, 74);
             this.btnSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(95, 26);
@@ -320,7 +333,7 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(96, 60);
+            this.btnKaydet.Location = new System.Drawing.Point(95, 45);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(95, 24);
@@ -331,7 +344,7 @@
             // 
             // btnListele
             // 
-            this.btnListele.Location = new System.Drawing.Point(96, 31);
+            this.btnListele.Location = new System.Drawing.Point(95, 16);
             this.btnListele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListele.Name = "btnListele";
             this.btnListele.Size = new System.Drawing.Size(95, 25);
@@ -343,11 +356,11 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(11, 289);
+            this.groupBox3.Location = new System.Drawing.Point(11, 268);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(848, 191);
+            this.groupBox3.Size = new System.Drawing.Size(848, 212);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kayıtlar";
@@ -369,7 +382,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 22);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(842, 167);
+            this.dataGridView1.Size = new System.Drawing.Size(842, 188);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -526,6 +539,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn perDurumDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn perMeslekDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button BtnRaporlar;
     }
 }
 
